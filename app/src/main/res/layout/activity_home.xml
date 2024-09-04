@@ -1,0 +1,116 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_background"
+    android:padding="16dp">
+
+    <!-- Button to view favorite quotes -->
+<androidx.cardview.widget.CardView
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="225dp"
+app:cardBackgroundColor="#D0BBF0"> <!-- Use app namespace for CardView attributes -->
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <Button
+        android:id="@+id/btnViewFavorites"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/ab"
+        android:text="Click Here To View Favorite Quotes"
+        android:backgroundTint="#D0BBF0"
+        android:textColor="@color/black"/>
+</LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+    <!-- Quote Display in CardView -->
+<androidx.cardview.widget.CardView
+android:id="@+id/quoteCardView"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="16dp"
+app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    android:padding="8dp"
+    app:cardBackgroundColor="@color/white">
+
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical">
+
+<TextView
+    android:id="@+id/tvQuote"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="“All I required to be happy was friendship and people I could admire.”"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    android:fontFamily="@font/ab"
+    android:textColor="@color/black"
+    android:layout_marginBottom="4dp"/>
+
+<!-- Author Display, Button, and Icon in a RelativeLayout -->
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginTop="8dp">
+
+    <!-- Author TextView -->
+    <TextView
+        android:id="@+id/tvAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Christian Dior"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="4dp"/>
+
+    <!-- Favorite Icon Button -->
+    <ImageButton
+        android:id="@+id/btnFavorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/tvAuthor"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
+        android:background="@null"
+        android:src="@drawable/baseline_favorite_border_24" />
+
+    <!-- Generate Another Quote Button -->
+    <Button
+        android:id="@+id/btnGenerateQuote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:textSize="24sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_toStartOf="@id/btnFavorite"
+        android:background="@drawable/button_background"
+        android:fontFamily="@font/ab"
+        android:text="Generate Another Quote"
+        android:textColor="@color/white" />
+</RelativeLayout>
+</LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
